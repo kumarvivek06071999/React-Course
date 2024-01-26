@@ -39,7 +39,7 @@ const Card1 = (props) => {
     return (
         <div className=' w-2/6 mt-4'>
             <div>
-                < button className=" m-1button button3" onClick={props.ondeletecards} > Delete Card</button>
+                < button style={props.btnstyle} className=" m-1button button3" onClick={props.ondeletecards} > Delete Card</button>
                 <button className=" m-1 button button4" onClick={() => toggleView()} >Show / Hide</button>
             </div >
 

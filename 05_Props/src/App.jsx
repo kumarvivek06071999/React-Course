@@ -56,6 +56,15 @@ function App() {
     setCards(cards_copy)
   }
 
+  const dynamicbtn = {
+    backgroundColor: null
+  }
+
+  if (cards.length < 3) dynamicbtn.backgroundColor = "blue"
+  if (cards.length < 2) dynamicbtn.backgroundColor = "red"
+
+
+
   const buttonMarkup = (
     <div>
       < button className=" m-1button button3" onClick={() => changeNameHandler("Justin Beiber")} > Change Name</button>
@@ -68,6 +77,7 @@ function App() {
     discription={faker.lorem.sentence(10)}
     // onClickHandler={() => { changeNameHandler("Alan Walker") }}
     onInputChangeHandler={changeInputHandler}
+
   >
   </Card>
   )
@@ -84,11 +94,11 @@ function App() {
         (cards.map((card) =>
           <Card1
             name={card.name}
-            nameChangeHandler={() => changeSecondCardName("Roushan jha")}
             onchangeInput={(e) => card2InputChanger(e, card.id)}
             cardlist={cards}
             key={card.id}
             ondeletecards={() => card2DeleteHandler(card.id)}
+            btnstyle={dynamicbtn}
           >Hello World</Card1>
         ))
       }
