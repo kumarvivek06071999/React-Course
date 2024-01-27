@@ -1,8 +1,10 @@
 import React from 'react'
 
+
 const Card = (props) => {
     return (
         <div className="relative h-[400px] w-[300px] rounded-md mt-4">
+
             <img
                 src={props.profile}
                 alt="AirMax Pro"

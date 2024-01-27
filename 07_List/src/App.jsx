@@ -2,6 +2,24 @@ import { useState } from 'react'
 import './App.css'
 import Card from './components/Card'
 import { faker, it } from '@faker-js/faker'
+import styled, { ThemeProvider, css } from 'styled-components'
+
+const theme = {
+  primary: 'blue',
+  mango: 'yellow'
+}
+
+const Button = styled.button`
+ border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: ${props => props.length > 2 ? "green" : props.length == 2 ? "blue" : "red"};
+  cursor: pointer;
+  transition: border-color 0.25s;
+`
 
 function App() {
   const [showCard, setShowCard] = useState(true)
@@ -74,11 +92,13 @@ function App() {
 
 
   return (
-
-    <>
-      <h2>Cards</h2>
-      {cardMarkup}
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <h2>Cards</h2>
+        <Button color='primary' length={cards.length}>Toggle</Button>
+        {cardMarkup}
+      </>
+    </ThemeProvider>
   )
 }
 
