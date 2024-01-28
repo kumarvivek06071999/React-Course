@@ -23,6 +23,7 @@ const Button = styled.button`
 
 class App extends Component {
   constructor(props) {
+    console.log("App jsx constructor")
     super(props)
     this.state = {
       cards: [
@@ -46,6 +47,10 @@ class App extends Component {
     }
   }
 
+  static getDerivedStateFromProps(props, state) {
+    console.log("App js getDerivedStateFromProps", props)
+    return state
+  }
 
   // Rendering list of Cards from array of objects
 
@@ -78,9 +83,13 @@ class App extends Component {
 
   }
 
+  componentDidMount() {
+    console.log("App js componentDidMount")
+  }
   // Conditional Rendering here 
 
   render() {
+    console.log("App js render")
     const buttonStyle = {
       backgroundColor: null
     }

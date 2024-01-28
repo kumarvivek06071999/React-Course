@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 class Card extends Component {
 
     render() {
+        console.log("Card js render")
         return (
             <div className="relative h-[400px] w-[300px] rounded-md mt-4">
 
