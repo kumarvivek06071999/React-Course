@@ -19,7 +19,6 @@ function App() {
         </ColorContext.Provider>
       </NameContext.Provider> */}
 
-
       <Counter />
     </>
   )

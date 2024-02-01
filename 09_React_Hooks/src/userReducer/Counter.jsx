@@ -24,15 +24,15 @@ const Counter = () => {
         <div>
             <div>{count}</div>
             <ButtonGroup>
-                <Button color="danger" onClick={() => dispatch("increment")} >
+                <Button className=' bg-green-800 mx-2' color="danger" onClick={() => dispatch("increment")} >
                     Increment
                 </Button>
 
-                <Button color="warning" onClick={() => dispatch("decrement")}>
+                <Button className=' bg-red-800 mx-2' onClick={() => dispatch("decrement")}>
                     Decrement
                 </Button>
 
-                <Button color="success" onClick={() => dispatch("reset")}>
+                <Button className=' bg-blue-800 mx-2' onClick={() => dispatch("reset")}>
                     Reset
                 </Button>
 
