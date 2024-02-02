@@ -6,6 +6,7 @@ import Counter from './userReducer/Counter3'
 import Counter1 from './userReducer/Counter1'
 import TodoList from './useReducer with useEffect/TodoList'
 import MainComponent from './useMemo/MainComponent'
+import UseRefMainCom from './useRef/UseRefMainCom'
 
 // Async function + useEffect + Conditional Rendering
 
@@ -52,7 +53,9 @@ function App() {
       </cardContext.Provider>
 
       {/* <TodoList /> */}
-      {<MainComponent />}
+      {/* {<MainComponent />} */}
+
+      <UseRefMainCom />
     </>
   )
 }
