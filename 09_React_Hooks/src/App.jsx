@@ -4,6 +4,7 @@ import Card1 from './useEffect fetch data from axios/Card1'
 import ComponentA from './useContext/ComponentA'
 import Counter from './userReducer/Counter3'
 import Counter1 from './userReducer/Counter1'
+import TodoList from './useReducer with useEffect/TodoList'
 // Async function + useEffect + Conditional Rendering
 
 export const NameContext = React.createContext()
@@ -47,6 +48,8 @@ function App() {
       <cardContext.Provider value={{ state1: state1.count, state2: state2.count, dispatch1, dispatch2 }}>
         <Counter1 />
       </cardContext.Provider>
+
+      <TodoList />
     </>
   )
 }
