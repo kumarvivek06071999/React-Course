@@ -5,6 +5,8 @@ import ComponentA from './useContext/ComponentA'
 import Counter from './userReducer/Counter3'
 import Counter1 from './userReducer/Counter1'
 import TodoList from './useReducer with useEffect/TodoList'
+import MainComponent from './useMemo/MainComponent'
+
 // Async function + useEffect + Conditional Rendering
 
 export const NameContext = React.createContext()
@@ -49,7 +51,8 @@ function App() {
         <Counter1 />
       </cardContext.Provider>
 
-      <TodoList />
+      {/* <TodoList /> */}
+      {<MainComponent />}
     </>
   )
 }
