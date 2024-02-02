@@ -1,6 +1,6 @@
-import React, { useContext, useReducer } from 'react'
+import React, { useReducer, useContext } from 'react'
 import { Button, ButtonGroup } from 'reactstrap'
-import Counter2 from './Counter2'
+import Counter3 from './Counter3'
 import { cardContext } from '../App'
 
 const initialState = {
@@ -22,7 +22,7 @@ const reducer = (state, action) => {
 }
 
 
-const Counter1 = () => {
+const Counter2 = () => {
 
     const useCounterContext = useContext(cardContext)
     const { state1, state2, dispatch1, dispatch2 } = useCounterContext
@@ -47,11 +47,10 @@ const Counter1 = () => {
                 <Button className='bg-red-700 mx-3' onClick={() => dispatch2({ type: "decrement", payload: 5 })}>Decrement by 5</Button>
                 <Button className='bg-red-700 mx-3' onClick={() => dispatch2({ type: "reset", })}>Reset</Button>
             </ButtonGroup>
-
-            <Counter2 />
+            <Counter3 />
 
         </div>
     )
 }
 
-export default Counter1
+export default Counter2
